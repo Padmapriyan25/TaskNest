@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskNest</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-10">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold mb-4 text-center">TaskNest</h1>
+        <form id="taskForm" class="flex gap-2">
+            <input id="taskInput" type="text" placeholder="Enter task..." class="border p-2 flex-1 rounded" required/>
+            <button class="bg-blue-600 text-white px-4 rounded">Add</button>
+        </form>
+        <ul id="taskList" class="mt-6 space-y-3"></ul>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
