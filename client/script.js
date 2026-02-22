@@ -20,11 +20,8 @@ fetch(API)
         </span>
 
         <div class="space-x-2">
-            <button onclick="toggleTask(${task.id})"
-                class="text-green-600">✔</button>
-
-            <button onclick="deleteTask(${task.id})"
-                class="text-red-600">✖</button>
+            <button onclick="toggleTask(${task.id})" class="text-green-600">✓</button>
+            <button onclick="deleteTask(${task.id})" class="text-red-600">✗</button>
         </div>
         `;
 
@@ -41,17 +38,21 @@ fetch(API, {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title: input.value }),
     }).then(() => {
-    input.value = "";
-    loadTasks();
-    });
+        input.value = "";
+        loadTasks();
+        });
 });
 
 function toggleTask(id) {
-    fetch(`${API}/${id}`, { method: "PATCH" }).then(loadTasks);
+    fetch(`${API}/${id}`, {
+        method: "PATCH" 
+    }).then(loadTasks);
 }
 
 function deleteTask(id) {
-    fetch(`${API}/${id}`, { method: "DELETE" }).then(loadTasks);
+    fetch(`${API}/${id}`, { 
+        method: "DELETE" 
+    }).then(loadTasks);
 }
 
 loadTasks();
