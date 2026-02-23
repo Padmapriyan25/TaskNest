@@ -1,0 +1,23 @@
+[33mcommit 5530b7a2eebf979c65b9e02663ddfd93d0ea2577[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfrontend-redesign[m[33m, [m[1;31morigin/frontend-redesign[m[33m)[m
+Author: Padmapriyan <n.p.padmapriyan@gamil.com>
+Date:   Sun Feb 22 23:22:44 2026 +0530
+
+    Redesigned frontend layout
+
+[33mcommit ff9440b031808bfbd7fbd4172629399692174341[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Padmapriyan <n.p.padmapriyan@gamil.com>
+Date:   Sun Feb 22 22:01:49 2026 +0530
+
+    Working of main branch before redesign
+
+[33mcommit 5ca8d3022a8eecb619102d260b34e83d9c432883[m
+Author: Padmapriyan <n.p.padmapriyan@gamil.com>
+Date:   Sat Feb 21 09:38:00 2026 +0530
+
+    Remove node_modules and add gitignore
+
+[33mcommit c3bca0bc3264ec0e36f9d99abaaa187a14222957[m
+Author: Padmapriyan <n.p.padmapriyan@gamil.com>
+Date:   Sat Feb 21 09:31:22 2026 +0530
+
+    Initial TaskNest project setup
