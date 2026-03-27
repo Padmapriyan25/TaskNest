@@ -10,22 +10,24 @@ fetch(API)
     .then((tasks) => {
     list.innerHTML = "";
 
-    tasks.forEach((task) => {
-        const li = document.createElement("li");
-        li.className = "flex justify-between items-center border p-3 rounded";
+tasks.forEach((task) => {
+    const li = document.createElement("li");
 
-        li.innerHTML = `
-        <span class="${task.completed ? "line-through text-gray-400" : ""}">
+    li.className = `bg-white/30 backdrop-blur-md px-5 py-4 rounded-2xl flex justify-between items-center transition-all duration-300 hover:bg-white/40 hover:scale-[1.02] shadow-md `;
+
+    li.innerHTML = `
+        <span class="text-white font-medium tracking-wide 
+            ${task.completed ? "line-through opacity-60" : ""}">
             ${task.title}
         </span>
 
-        <div class="space-x-2">
-            <button onclick="toggleTask(${task.id})" class="text-green-600">✓</button>
-            <button onclick="deleteTask(${task.id})" class="text-red-600">✗</button>
+        <div class="flex items-center gap-3">
+            <button onclick="toggleTask(${task.id})" class="w-8 h-8 flex items-center justify-center rounded-full bg-green-500/20 hover:bg-green-500 hover:text-white text-green-300 transition duration-200"> ✓ </button>
+            <button onclick="deleteTask(${task.id})" class="w-8 h-8 flex items-center justify-center rounded-full bg-red-500/20 hover:bg-red-500 hover:text-white text-red-300 transition duration-200"> ✗ </button>
         </div>
-        `;
+    `;
 
-            list.appendChild(li);
+    taskList.appendChild(li);
         });
     });
 }
